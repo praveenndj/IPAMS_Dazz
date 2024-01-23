@@ -1,16 +1,17 @@
 import React from "react";
 import './/NavibarAdmin.css'
+import { Link } from "react-router-dom";
 export default function NavibarAdmin(){
     return(
         <div className="navibar-admin">
             <div className="brand-name"><h6>DAZZ SOFTWARE SOLUTIONS</h6></div>
             <div className="navibar-admin-navigation">
-                <a href="/employee"><p>Employee</p></a>
-                <a href="/department"><p>Department</p></a>
-                <a href="/projects"><p>Projects</p></a>
-                <a href="/report"><p>Report</p></a>
-                <a href="/addannouncements"><p>Announcements</p></a>
-                <a href="/editrequest"><p>Edit Requests</p></a>
+                <Link to="/employee"><p>Employee</p></Link>
+                <Link to="/department"><p>Department</p></Link>
+                <Link to="/projects"><p>Projects</p></Link>
+                <Link to="/report"><p>Report</p></Link>
+                <Link to="/addannouncements"><p>Announcements</p></Link>
+                <Link to="/editrequest"><p>Edit Requests</p></Link>
             </div>
             <div className="navibar-admin-buttons"></div>
         </div>
