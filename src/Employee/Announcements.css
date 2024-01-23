@@ -1,0 +1,35 @@
+.announcements-page{
+    background-color: rgb(2,1,43);
+}
+.heading-containner{
+    margin-top: 70px;
+    color: white;
+}
+.announcements-container{
+    margin-top:70px;
+    margin-left: 30px;
+    background-color: rgb(2,1,43);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.announcement{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: left;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: white;
+    align-content: space-between;
+    font-size: 1em;
+}
+
+.announcement h5,h4,h6{
+    text-align: start;
+    padding-bottom: 10px;
+}

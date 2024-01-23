@@ -1,0 +1,27 @@
+.show-department{
+    height: 100vh;
+    background-color: rgb(2,1,43);
+    color:white;
+}
+.show-department-container{
+    background-color: rgb(2,1,43);
+    color: white;
+    padding: 100px;
+}
+.input-box span {
+    position: absolute;
+    left: 0;
+    font-size: 0.7em;
+    transform: translateX(14px) translateY(-7.5px);
+    padding: 0 6px 1px 5px;
+    background: rgb(2, 1, 43);
+    letter-spacing: 1px;
+    color: white;
+ }
+ .search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+    padding: 30px;
+ }
