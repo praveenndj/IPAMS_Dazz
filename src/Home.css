@@ -1,0 +1,86 @@
+.about-dazz-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  margin-top: 70px;
+
+}
+
+.welcome-section {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  background-color: #12B1D1; /* Theme color */
+  color: #fff; /* Text color */
+  padding: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mission-section,
+.who-we-are-section,
+.sets-us-apart-section,
+.services-section,
+.join-us-section {
+  margin-top: 70px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission-section:hover,
+.who-we-are-section:hover,
+.sets-us-apart-section:hover,
+.services-section:hover,
+.join-us-section:hover {
+  transform: scale(1.02);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.welcome-message {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-message:hover {
+  background-color: #297fb8;
+}
+
+.welcome-message h1 {
+  margin: 0;
+  font-size: 2em;
+  transition: color 0.3s ease-in-out;
+}
+
+.welcome-message:hover h1 {
+  color: #f0f0f0;
+}
+
+/* Add more specific styling and animations as needed */

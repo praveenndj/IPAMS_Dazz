@@ -3,6 +3,7 @@ nav{
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  width: 100%;
 }
 .container-nav
 {
@@ -15,7 +16,7 @@ nav{
     background:  rgb(2, 1, 43);
     top: 0%;
     position: fixed;
-    z-index: 2;
+    z-index: 0;
 }
 .brand{
   color: white;
@@ -28,7 +29,7 @@ nav{
   padding: 20px;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 23%;
+  margin-left: 22%;
   margin-right: 17%;
 }
 .space-between a{

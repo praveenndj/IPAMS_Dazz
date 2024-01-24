@@ -1,0 +1,26 @@
+.settings-container{
+    background-color: rgb(2,1,43);
+    color: white;
+    font-family:  -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+    margin-top: 70px;
+    padding-left: 70px;
+    height: 100vh;
+}
+
+.settings-container-table{
+    width: 90%;
+}
+
+.settings-container-table td{
+    padding: 20px;
+}
+.settings-container-table button{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+.settings-container-table button:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.03);
+}

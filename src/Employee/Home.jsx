@@ -36,7 +36,7 @@ const Home = () => {
         <MDBModalDialog size='xl'>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Company Milestone Celebration</MDBModalTitle>
+              <MDBModalTitle>Announcement : Company Milestone Celebration</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody><h6>Dazz Software Solutions is proud to celebrate a significant milestone! Your dedication and hard work have contributed to our success. Join us for a celebration to acknowledge this achievement at Party Hall by 5.00pm sharply on 27 January 2024</h6><p> Siva Subramaniyam, COO Jan 23,2024 10:32 am</p></MDBModalBody>
@@ -50,14 +50,24 @@ const Home = () => {
         </MDBModalDialog>
       </MDBModal>
 
-              
-      <div className="welcome-section" >
-        <div className="welcome-section-content">
-        <h1 className="typing-content">Welcome to Dazz Analysis Tool</h1>
-        <p>Where innovation meets excellence in the world of software solutions.</p>
-        </div>
-        <div className="welcome-section-img"><img src={homeImage} alt='Dazz Company' width={400}/></div>
-      </div>
+      <div class="context">
+        <h3>Unleash the powerful insights of anlysis through Dazz Performance Analysis Tool</h3>
+    </div>
+       <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+         </div >       
+     
 
       <div className="mission-section">
         <div data-aos="fade-right"><h2>Our Mission</h2></div>
