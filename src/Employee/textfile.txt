@@ -1,0 +1,13 @@
+import React from "react";
+import "..//Employee/Dashboard.css"
+import BarchartA from "./Visuals/BarchartA";
+import Linechart from "./Visuals/Linechart";
+import PieChart from "./Visuals/Piechart";
+export default function Dashboard(){
+    return(
+    <div>
+    <PieChart/>
+    <Linechart/>
+    </div>
+    );
+}

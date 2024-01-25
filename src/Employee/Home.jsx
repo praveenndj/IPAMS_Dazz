@@ -14,7 +14,6 @@ import {
 import "aos/dist/aos.css";
 import './/Home.css'
 import Navibar from "./Navibar";
-import homeImage from "../Employee/images/homeimg.gif"
 import FooterContent from "./FooterContent";
 const Home = () => {
   useEffect(() => {
@@ -41,7 +40,7 @@ const Home = () => {
             </MDBModalHeader>
             <MDBModalBody><h6>Dazz Software Solutions is proud to celebrate a significant milestone! Your dedication and hard work have contributed to our success. Join us for a celebration to acknowledge this achievement at Party Hall by 5.00pm sharply on 27 January 2024</h6><p> Siva Subramaniyam, COO Jan 23,2024 10:32 am</p></MDBModalBody>
             <MDBModalFooter>
-              <button color='secondary' onClick={toggleOpen}>
+              <button color='secondary' style={{paddingRight:'20px'}} onClick={toggleOpen}>
                 Close
               </button>
               <button ><Link to='/announcements'style={{textDecoration:'none',color:'white'}}>View other Announcements</Link></button>
@@ -50,8 +49,9 @@ const Home = () => {
         </MDBModalDialog>
       </MDBModal>
 
-      <div class="context">
-        <h3>Unleash the powerful insights of anlysis through Dazz Performance Analysis Tool</h3>
+      <div class="landing-context">
+        <h3>Unleash the powerful insights of anlysis through <br/>Dazz Performance Analysis Tool</h3>
+        <p>Experience the transformative capabilities of Dazz Performance Analysis Tool, unlocking unparalleled insights through advanced analytics.Uncover hidden patterns, optimize strategies, and make data-driven decisions effortlessly with this cutting-edge tool.</p>
     </div>
        <div class="area" >
             <ul class="circles">
