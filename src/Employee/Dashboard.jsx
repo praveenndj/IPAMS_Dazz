@@ -138,15 +138,11 @@ const Dashboard = () => {
     },
   };
 
-  const pieChartData = {
-    // ... pie chart data
-  };
-
   // Bar Chart Data and Options
   const barChartOptions = {
     series: [{
         name: 'Completed Projects',
-        data: [101,98,331,297,242,111],
+        data: [30,48,51,47,42,31],
       }],
       chart: {
         height: 300,
@@ -176,7 +172,7 @@ const Dashboard = () => {
         },
       },
       xaxis: {
-        categories: ["Data Science", "Cyber Security", "Web-Development", "Software Development", "Testing", "Data Analytics"],
+        categories: ["DS", "CY", "Web Dev", "Software Dev", "Testing", "Data Analytics"],
         position: 'bottom',
         axisBorder: {
           show: false,
@@ -215,15 +211,83 @@ const Dashboard = () => {
         },
       },
       title: {
-        text: 'Increase in Projects Count, 2023',
+        text: 'Increase in Projects Count',
         style: {
           color: '#444',
         },
       },
   };
 
-  const barChartData = {
-    // ... bar chart data
+  const treeMapOptions = {
+    series: [
+        {
+          data: [
+            {
+              x: 'New Delhi',
+              y: 218
+            },
+            {
+              x: 'Kolkata',
+              y: 149
+            },
+            {
+              x: 'Mumbai',
+              y: 184
+            },
+            {
+              x: 'Ahmedabad',
+              y: 55
+            },
+            {
+              x: 'Bangaluru',
+              y: 84
+            },
+            {
+              x: 'Pune',
+              y: 31
+            },
+            {
+              x: 'Chennai',
+              y: 70
+            },
+            {
+              x: 'Jaipur',
+              y: 30
+            },
+            {
+              x: 'Surat',
+              y: 44
+            },
+            {
+              x: 'Hyderabad',
+              y: 68
+            },
+            {
+              x: 'Lucknow',
+              y: 28
+            },
+            {
+              x: 'Indore',
+              y: 19
+            },
+            {
+              x: 'Kanpur',
+              y: 29
+            }
+          ]
+        }
+      ],
+        legend: {
+        show: false
+      },
+      chart: {
+        height: 300,
+        width:450,
+        type: 'treemap'
+      },
+      title: {
+        text: 'Clients Across India'
+      }
   };
   
   const heatMapOptions={
@@ -280,9 +344,70 @@ const Dashboard = () => {
       },
       colors: ["#008FFB"],
       title: {
-        text: 'Employees on Leave Count in Months of 2023'
+        text: 'Employees on Leave Count in last 12 Months'
       },
   };
+  const gaugeChartOptions = {
+    series: [97],
+          chart: {
+            height: 550,
+            width:450,
+          type: 'radialBar',
+          
+          sparkline: {
+            enabled: true
+          }
+        },
+        plotOptions: {
+          radialBar: {
+            startAngle: -90,
+            endAngle: 90,
+            track: {
+              background: "#e7e7e7",
+              strokeWidth: '97%',
+              margin: 5, // margin is in pixels
+              dropShadow: {
+                enabled: true,
+                top: 2,
+                left: 0,
+                color: '#999',
+                opacity: 1,
+                blur: 2
+              }
+            },
+            dataLabels: {
+              name: {
+                show: false
+              },
+              value: {
+                offsetY: -2,
+                fontSize: '22px'
+              }
+            }
+          }
+        },
+        grid: {
+          padding: {
+            top: -10
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'light',
+            shadeIntensity: 0.4,
+            inverseColors: false,
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 50, 53, 91]
+          },
+        },
+        labels: ['Working Hours Percentage'],
+        title: {
+            text: 'Your Working Hours Percentage'
+          },
+  };
+
   useEffect(() => {
     // Line Chart
     const lineChart = new ApexCharts(document.querySelector("#lineChart"), lineChartOptions);
@@ -298,40 +423,54 @@ const Dashboard = () => {
     
     const heatMap = new ApexCharts(document.querySelector("#heatMap"), heatMapOptions);
     heatMap.render();
+
+    const treeMap = new ApexCharts(document.querySelector("#treeMap"), treeMapOptions);
+    treeMap.render();
+
+    const gaugeChart = new ApexCharts(document.querySelector("#gaugeChart"), gaugeChartOptions);
+    gaugeChart.render();
     // Cleanup function to destroy the charts on component unmount
     return () => {
       lineChart.destroy();
       pieChart.destroy();
       barChart.destroy();
       heatMap.destroy();
+      treeMap.destroy();
+      gaugeChart.destroy();
     };
   }, []); // Empty dependency array ensures useEffect runs only once on mount
 
   return (
     <div>
-    <Navibar/>
+      <Navibar/>
+    <div className='dashboard-container'>
+    
     <div className='dashboard'>
-       <h2 style={{marginLeft:'70px',color: 'white'}}>DashBoard</h2>
+       <div style={{marginLeft:'70px',color: 'white'}}><h2>Dashboard</h2><h4>Raw Data into Data-Driven Insights</h4></div>
       <div className='dashboard-row'>
-      <div id="lineChart" style={{ borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
-        {/* Line Chart will be rendered here */}
-      </div>
-
       <div id="pieChart" style={{ borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
         {/* Pie Chart will be rendered here */}
+      </div>
+      <div id="barChart" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
+        {/* Bar Chart will be rendered here */}
       </div>
       <div id="heatMap" style={{ borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
         {/* Bar Chart will be rendered here */}
       </div>
       </div>
       <div className='dashboard-row'>
-      <div id="pieChart" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
-        {/* Pie Chart will be rendered here */}
+      <div id="lineChart" style={{ borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
+        {/* Line Chart will be rendered here */}
       </div>
-      <div id="barChart" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
+      <div id="gaugeChart" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
+        {/* Bar Chart will be rendered here */}
+      </div>
+      <div id="treeMap" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
         {/* Bar Chart will be rendered here */}
       </div>
       </div>
+      <center><p>*datas displayed here are sample datas used temporily</p></center>
+    </div>
     </div>
     </div>
   );
