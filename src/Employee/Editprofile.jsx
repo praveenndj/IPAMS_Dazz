@@ -19,10 +19,7 @@ export default function Editprofile(){
                <input  type="text" required=""/>
                <span>Name</span>
                </div></td></tr>
-               <tr><td colSpan={2} rowSpan={2} class="input-box">
-               <textarea id="paragraphInput" name="paragraph" rows="4" cols="65" style={{backgroundColor:'rgb(2,1,43)'}}/>
-               <span>Reason for editing</span>
-               </td></tr></table></div>
+               </table></div>
             <div className="editprofiletable-container"  data-aos='fade-in'>
             <table>
              <tbody>

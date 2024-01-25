@@ -15,6 +15,7 @@ export default function SignInForm(){
         <span className="forgot-password"><a href="/">Forgot Password ?</a></span>
         <Link to='/home' style={{textDecoration:'none', color:'white'}}><button className='login-button'>Sign In</button></Link>
       </form>
+      <p><Link to='/admin'>Sign in as Admin</Link></p>
       <div className="social-account-container">
         <span className="title">Contact us</span>
         <div className="social-accounts">

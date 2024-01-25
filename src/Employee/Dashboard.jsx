@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import "./Dashboard.css"
 import ApexCharts from 'apexcharts';
+import Navibar from './Navibar';
 
 const Dashboard = () => {
   // Line Chart Data and Options
@@ -106,7 +107,7 @@ const Dashboard = () => {
   const pieChartOptions = {
     series: [25, 15, 54, 45, 41, 17],
     chart: {
-      height: 350,
+      height: 300,
       type: 'pie',
       width: 450,
     },
@@ -124,7 +125,7 @@ const Dashboard = () => {
       },
     },
     title: {
-      text: "Monochrome Pie",
+      text: "Project Completion Department wise",
     },
     dataLabels: {
       formatter(val, opts) {
@@ -148,9 +149,9 @@ const Dashboard = () => {
         data: [101,98,331,297,242,111],
       }],
       chart: {
-        height: 350,
+        height: 300,
         type: 'bar',
-        width: 550,
+        width: 450,
       },
       plotOptions: {
         bar: {
@@ -176,7 +177,7 @@ const Dashboard = () => {
       },
       xaxis: {
         categories: ["Data Science", "Cyber Security", "Web-Development", "Software Development", "Testing", "Data Analytics"],
-        position: 'top',
+        position: 'bottom',
         axisBorder: {
           show: false,
         },
@@ -214,10 +215,7 @@ const Dashboard = () => {
         },
       },
       title: {
-        text: 'Increase in Project Income, 2023',
-        floating: true,
-        offsetY: 330,
-        align: 'center',
+        text: 'Increase in Projects Count, 2023',
         style: {
           color: '#444',
         },
@@ -230,43 +228,51 @@ const Dashboard = () => {
   
   const heatMapOptions={
     series: [{
-        name: 'Metric1',
-        data: generateData(18, {
-          min: 0,
-          max: 90
+        name: 'Data Science',
+        data: generateData(12, {
+          min: 10,
+          max: 50
         })
       },
       {
-        name: 'Metric2',
-        data: generateData(18, {
-          min: 0,
-          max: 90
+        name: 'Cyber Security',
+        data: generateData(12, {
+          min: 10,
+          max: 50
         })
       },
       {
-        name: 'Metric3',
-        data: generateData(18, {
-          min: 0,
-          max: 90
+        name: 'Web Development',
+        data: generateData(12, {
+          min: 10,
+          max: 50
         })
       },
       {
-        name: 'Metric4',
-        data: generateData(18, {
-          min: 0,
-          max: 90
+        name: 'Software Devlopment',
+        data: generateData(12, {
+          min: 10,
+          max: 50
         })
       },
       {
-        name: 'Metric5',
-        data: generateData(18, {
-          min: 0,
-          max: 90
+        name: 'Testing',
+        data: generateData(12, {
+          min: 10,
+          max: 50
+        })
+      },
+      {
+        name: 'Data Analytics',
+        data: generateData(12, {
+          min: 10,
+          max: 50
         })
       },
       ],
         chart: {
-        height: 350,
+        height: 300,
+        width:450,
         type: 'heatmap',
       },
       dataLabels: {
@@ -274,7 +280,7 @@ const Dashboard = () => {
       },
       colors: ["#008FFB"],
       title: {
-        text: 'HeatMap Chart (Single color)'
+        text: 'Employees on Leave Count in Months of 2023'
       },
   };
   useEffect(() => {
@@ -302,9 +308,12 @@ const Dashboard = () => {
   }, []); // Empty dependency array ensures useEffect runs only once on mount
 
   return (
+    <div>
+    <Navibar/>
     <div className='dashboard'>
+       <h2 style={{marginLeft:'70px',color: 'white'}}>DashBoard</h2>
       <div className='dashboard-row'>
-      <div id="lineChart" style={{ borderRadius: '8px', backgroundColor: 'white', marginTop: '30px',padding:'20px 20px' }}>
+      <div id="lineChart" style={{ borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
         {/* Line Chart will be rendered here */}
       </div>
 
@@ -316,13 +325,14 @@ const Dashboard = () => {
       </div>
       </div>
       <div className='dashboard-row'>
-      <div id="pieChart" style={{ borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px' }}>
+      <div id="pieChart" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
         {/* Pie Chart will be rendered here */}
       </div>
-      <div id="barChart">
+      <div id="barChart" style={{  borderRadius: '8px', backgroundColor: 'white', boxShadow: '30px',paddingBottom:'30px' }}>
         {/* Bar Chart will be rendered here */}
       </div>
       </div>
+    </div>
     </div>
   );
 };
