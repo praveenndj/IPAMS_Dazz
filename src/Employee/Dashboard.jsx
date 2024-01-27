@@ -469,7 +469,7 @@ const Dashboard = () => {
         {/* Bar Chart will be rendered here */}
       </div>
       </div>
-      <center><p>*datas displayed here are sample datas used temporily</p></center>
+      <center><p>*datas displayed here are sample datas used for testing the working of the website and have variations with actual design plan</p></center>
     </div>
     </div>
     </div>

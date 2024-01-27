@@ -19,10 +19,10 @@ export default function Profile(){
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                   alt="avatar"
                   className="rounded-circle"
-                  style={{ width: '150px' }}
+                  style={{ width: '150px', marginLeft:'270px' }}
                   fluid />
                 <div style={{color:'white'}}><h2>Welcome Praveenn!</h2></div>
-                <div style={{color:'white'}}><h5>What's up?, Explore your profile details<br/>Sit back, relax, and enjoy!</h5></div>
+                <div style={{color:'white'}}><h5>What's up?, Explore your profile details</h5></div>
                 
               </MDBCardBody>
             </MDBCard>

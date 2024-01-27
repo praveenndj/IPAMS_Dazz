@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,24 +10,24 @@ export default function App() {
        
 
         <div>
-          <a href='' className='me-4 text-reset text-white'>
+          <Link to='' className='me-4 text-reset text-white'>
             <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href='' className='me-4 text-reset text-white'>
+          </Link>
+          <Link to='' className='me-4 text-reset text-white'>
             <MDBIcon fab icon="twitter" />
-          </a>
-          <a href='' className='me-4 text-reset text-white'>
+          </Link>
+          <Link to='' className='me-4 text-reset text-white'>
             <MDBIcon fab icon="google" />
-          </a>
-          <a href='' className='me-4 text-reset text-white'>
+          </Link>
+          <Link to='' className='me-4 text-reset text-white'>
             <MDBIcon fab icon="instagram" />
-          </a>
-          <a href='' className='me-4 text-reset text-white'>
+          </Link>
+          <Link to='' className='me-4 text-reset text-white'>
             <MDBIcon fab icon="linkedin" />
-          </a>
-          <a href='' className='me-4 text-reset text-white'>
+          </Link>
+          <Link to='' className='me-4 text-reset text-white'>
             <MDBIcon fab icon="github" />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -46,48 +47,48 @@ export default function App() {
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Pages</h6>
               <p>
-                <a href='#!' className='text-reset'>
+                <Link to='#!' className='text-reset'>
                   Dazz
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='/home' className='text-reset'>
+                <Link to='/home' className='text-reset'>
                   Home
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='/profile' className='text-reset'>
+                <Link to='/profile' className='text-reset'>
                   Profile
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='/announcements' className='text-reset'>
+                <Link to='/announcements' className='text-reset'>
                   Announcements
-                </a>
+                </Link>
               </p>
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
-                <a href='/leaderboard' className='text-reset'>
+                <Link to='/leaderboard' className='text-reset'>
                   Leaderboard
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='dashboard' className='text-reset'>
+                <Link to='dashboard' className='text-reset'>
                   Dashboard
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='settings' className='text-reset'>
+                <Link to='settings' className='text-reset'>
                   Settings
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='/help' className='text-reset'>
+                <Link to='/help' className='text-reset'>
                   Help
-                </a>
+                </Link>
               </p>
             </MDBCol>
 
@@ -114,9 +115,9 @@ export default function App() {
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2023 Copyright:
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
+        <Link className='text-reset fw-bold' to='/home'>
           Dazz Software Solutions
-        </a>
+        </Link>
       </div>
     </MDBFooter>
   );
