@@ -51,7 +51,7 @@ const Home = () => {
 
       <div class="landing-context">
         <h3>Unleash the powerful insights of anlysis through<br/>Dazz Performance Analysis Tool</h3>
-        <p>Experience the transformative capabilities of Dazz Performance Analysis Tool, unlocking unparalleled insights through advanced analytics.Uncover hidden patterns, optimize strategies, and make data-driven decisions effortlessly with this cutting-edge tool.</p>
+        <p>Experience the transformative capabilities of Dazz Software Solution's Own Performance Analysis Tool, unlocking unparalleled insights through advanced analytics.Uncover hidden patterns, optimize strategies, and make data-driven decisions effortlessly with this cutting-edge tool.</p>
     </div>
        <div class="area" >
             <ul class="circles">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import Dazzlogo from '../Employee/images/Dazz2.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
@@ -36,7 +37,7 @@ export default function App() {
           <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon icon="gem" className="me-3" />
+                <img src={Dazzlogo}/>
                 DAZZ SOFTWARE SOLUTIONS
               </h6>
               <p>
