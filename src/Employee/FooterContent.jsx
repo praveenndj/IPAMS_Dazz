@@ -115,7 +115,7 @@ export default function App() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2023 Copyright:
+        © 2024 Copyright:
         <Link className='text-reset fw-bold' to='/home'>
           Dazz Software Solutions
         </Link>
