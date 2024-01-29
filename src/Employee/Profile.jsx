@@ -90,7 +90,7 @@ export default function Profile(){
           <span>First name</span>
           </div></td>
      </tr>
-     <tr><td colSpan={2}><p>*For editing profile, go profile and make a request</p></td></tr>
+     <tr><td colSpan={2}><p>*For editing profile, go settings and make a request</p></td></tr>
     </tbody>
   </table>
 </div>
