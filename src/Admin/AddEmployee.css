@@ -15,6 +15,10 @@
 .modal-content { 
     background-color: rgb(2,1,43);
     color: white;
+    
+}
+.modal-body{
+    align-items: center;
 }
 .employee-table {
     border-collapse: collapse;
@@ -27,7 +31,7 @@
     flex-wrap: nowrap;
 }
 .employee-table td {
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: left;
     padding: 8px;
     flex-wrap: nowrap;

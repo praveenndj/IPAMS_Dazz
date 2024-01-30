@@ -13,7 +13,7 @@ import VerifyPassword from './Employee/VerifyPassword.jsx';
 import ResetPassword from './Employee/ResetPassword.jsx';
 import Editprofile from './Employee/Editprofile.jsx';
 import Admin from './Admin/Admin.jsx';
-import Employee from './Admin/Employee.jsx';
+import AddEmployee from './Admin/AddEmployee.jsx';
 import Department from './Admin/Department.jsx';
 import Projects from './Admin/Projects.jsx';
 import AddAnnouncements from './Admin/AddAnnouncements.jsx';
@@ -36,7 +36,7 @@ function App() {
         <Route path='/resetpassword' element={<ResetPassword/>}/>
         <Route path='/editprofile' element={<Editprofile/>}/>
         <Route path='/admin' element={<Admin/>}/>
-        <Route path='/employee' element={<Employee/>}/>
+        <Route path='/addemployee' element={<AddEmployee/>}/>
         <Route path='/department' element={<Department/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/addannouncements' element={<AddAnnouncements/>}/>

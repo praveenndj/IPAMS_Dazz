@@ -6,7 +6,7 @@ export default function NavibarAdmin(){
         <div className="navibar-admin">
             <div className="brand-name"><h6>DAZZ SOFTWARE SOLUTIONS</h6></div>
             <div className="navibar-admin-navigation">
-                <Link to="/employee"><p>Employee</p></Link>
+                <Link to="/addemployee"><p>Employee</p></Link>
                 <Link to="/department"><p>Department</p></Link>
                 <Link to="/projects"><p>Projects</p></Link>
                 <Link to="/report"><p>Report</p></Link>

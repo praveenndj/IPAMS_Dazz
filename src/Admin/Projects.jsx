@@ -1,5 +1,5 @@
 import React from "react";
-import './/Employee.css'
+import './/AddEmployee.css'
 import NavibarAdmin from "./NavibarAdmin";
 import Table from 'react-bootstrap/Table';
 import { useState } from 'react';
