@@ -4,11 +4,9 @@ import './/AddEmployee.css'
 import NavibarAdmin from "./NavibarAdmin";
 import Table from 'react-bootstrap/Table';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 export default function AddEmployee(){
-    const navigate = useNavigate();
     const [show, setShow] = useState(false);
     const [e_id,setE_id] = useState();
     const [firstName,setfirstName] = useState();
@@ -16,18 +14,15 @@ export default function AddEmployee(){
     const [age,setAge] = useState();
     const [designation,setDesignation] = useState();
     const [department,setDepartment] = useState();
-    const [experiance,setExperiance] = useState();
+    const [experience,setExperience] = useState();
     const [dateOfJoining,setDateOfJoining] = useState();
     const [address,setAddress] = useState();
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const Submit = (e) => {
-            e.preventDefault();
-            axios.post('https://localhost:3001/addemployee',{e_id,firstName,lastName,age,designation,department,experiance,dateOfJoining,address})
-            .then( result =>{
-                console.log(result)
-                window.alert('Successfully added the employee')
-                navigate('/addemployee')
+    const handleSubmit = (e) => {
+            axios.post('http://localhost:3001/addemployee', {e_id,firstName,lastName,age,designation,department,experience,dateOfJoining,address})
+            .then(() =>{
+                window.location.reload();
             })
             .catch((err) => console.log(err))
     }
@@ -38,77 +33,75 @@ export default function AddEmployee(){
              <div className="employee-description-content"><div><h2>Manage The Employees!</h2><p>Effortlessly oversee your team with the Employee page in our Admin Portal. View all employees at a glance, with essential details displayed in a user-friendly format. Add new team members seamlessly by entering their information through a straightforward interface. Streamline your administrative tasks and ensure efficient workforce management in just a few clicks!</p><> <Button variant="primary" onClick={handleShow}>
         Add a Employeee
       </Button>
-       <form onSubmit={Submit}>
+      
       <Modal size="lg"  show={show} onHide={handleClose}>
-        <Modal.Header closeButton style={{color:'white'}}>
+        <Modal.Header closeButton>
           <Modal.Title>Add a Employee</Modal.Title>
         </Modal.Header>
         <Modal.Body> 
         <center>  
+        <form onSubmit={handleSubmit}>
         <table>
              <tbody>
                <tr>
                <td><div className="input-box">
                <span>Employee ID</span>
-               <input placeholder="Write here..." type="text" required="" className="form-control" onChange={(e)=>setE_id(e.target.value)}/>
+               <input placeholder="Write here..." type="text" required={true} className="form-control"  onChange={(e)=>setE_id(e.target.value)}/>
                </div></td>
                <td><div className="input-box">
                 <span>First name</span>
-                <input placeholder="Write here..." type="text" required="" className="form-control" onChange={(e)=>setfirstName(e.target.value)}/>
+                <input placeholder="Write here..." type="text" required={true} className="form-control" onChange={(e)=>setfirstName(e.target.value)}/>
                 </div></td>
                 </tr>
                 <tr>
                <td><div className="input-box">
                <span>Last Name</span>
-               <input placeholder="Write here..." type="text" required="" className="form-control" onChange={(e)=>setlastName(e.target.value)}/>
+               <input placeholder="Write here..." type="text" required={true} className="form-control" onChange={(e)=>setlastName(e.target.value)}/>
                </div></td>
                <td><div className ="input-box">
                <span>Age</span>
-                <input placeholder="Write here..." type="number" required="" className="form-control" onChange={(e)=>setAge(e.target.value)}/>
+                <input placeholder="Write here..." type="number" required={true} className="form-control" onChange={(e)=>setAge(e.target.value)}/>
                 </div></td>
                 </tr>
                 <tr>
                <td><div className ="input-box">
                <span>Designation</span>
-               <input placeholder="Write here..." type="text" required="" className="form-control" onChange={(e)=>setDesignation(e.target.value)}/>
+               <input placeholder="Write here..." type="text" required={true} className="form-control" onChange={(e)=>setDesignation(e.target.value)}/>
                </div></td>
                <td><div className ="input-box">
                <span>Department</span>
-                <input placeholder="Write here..." type="text" required="" className="form-control" onChange={(e)=>setDepartment(e.target.value)}/>
+                <input placeholder="Write here..." type="text" required={true} className="form-control" onChange={(e)=>setDepartment(e.target.value)}/>
                 </div></td>
                 </tr>
                 <tr>
                <td><div className ="input-box">
                <span>Experiance</span>
-               <input placeholder="Write here..." type="number" required="" className="form-control" onChange={(e)=>setExperiance(e.target.value)}/>
+               <input placeholder="Write here..." type="number" required={true} className="form-control" onChange={(e)=>setExperience(e.target.value)}/>
                </div></td>
                <td><div className ="input-box">
                <span>Date of Joining</span>
-                <input placeholder="Write here..." type="date" required="" className="form-control" onChange={(e)=>setDateOfJoining(e.target.value)}/>
+                <input placeholder="Write here..." type="date" required={true} className="form-control" onChange={(e)=>setDateOfJoining(e.target.value)}/>
                 </div></td>
                 </tr>
                 <tr>
                     <td colSpan={2}>
                     <div className ="input-box">
                     <span>Address</span>
-                    <textarea name="paragraph_text" cols="78" rows="4" className="form-control" onChange={(e)=>setAddress(e.target.value)}/>
+                    <textarea name="paragraph_text" required={true} cols="78" rows="4" className="form-control" onChange={(e)=>setAddress(e.target.value)}/>
                     </div>
                     </td>
                 </tr>
                 
                 </tbody>
                 </table>
+                <button class='btn btn-secondary' onClick={()=>handleClose()}>Cancel</button>&nbsp;&nbsp;
+                <button type="submit" class='btn btn-success'>Add Employee</button>
+                
+                </form>
                 </center>
+                
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button   className="btn btn-success" variant="secondary" onClick={handleClose}>
-            Add Employee
-          </Button>
-        </Modal.Footer>
-      </Modal></form></></div></div>
+      </Modal></></div></div>
         </div>
         <div className="employee-description"><h2>All Employees</h2></div>
         <div className="employee-table">

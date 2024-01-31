@@ -9,7 +9,7 @@
     margin-top: 10px;
 }
 .modal-header .close{
-    color: white;
+    fill: white !important;
 }
 
 .modal-content { 
