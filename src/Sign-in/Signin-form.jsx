@@ -1,11 +1,12 @@
 import React from 'react';
 import './/Signin-form.css'
 import { Link } from 'react-router-dom';
+import Dazzlogo from '../Employee/images/Dazz2.png'
 export default function SignInForm(){
   return (
     
     <div className='big-container'>
-      <center><h2 className='animated-text'>Dazz Software Solutions</h2></center>
+      <center><div className='brand' ><img src={Dazzlogo} alt="company-logo" style={{width:'250px',height:'90px',paddingTop:'0px'}}/></div></center>
       <center>
     <div className="container-signin">
       <div className="heading">Sign In</div>
