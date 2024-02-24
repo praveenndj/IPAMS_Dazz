@@ -9,9 +9,7 @@ export default function NavibarAdmin(){
                 <Link to="/addemployee"><p>Employee</p></Link>
                 <Link to="/department"><p>Department</p></Link>
                 <Link to="/addproject"><p>Projects</p></Link>
-                <Link to="/report"><p>Report</p></Link>
                 <Link to="/addannouncements"><p>Announcements</p></Link>
-                <Link to="/editrequest"><p>Edit Requests</p></Link>
             </div>
             <div className="navibar-admin-buttons"></div>
         </div>

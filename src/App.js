@@ -15,12 +15,12 @@ import Editprofile from './Employee/Editprofile.jsx';
 import Admin from './Admin/Admin.jsx';
 import AddEmployee from './Admin/AddEmployee.jsx';
 import Department from './Admin/Department.jsx';
-import AddAnnouncements from './Admin/AddAnnouncements.jsx';
 import ShowEmployee from './Employee/ShowEmployee.jsx';
 import ShowDepartment from './Employee/ShowDepartment.jsx';
 import ShowProjects from './Employee/ShowProjects.jsx';
 import UpdateEmployee from './Admin/UpdateEmployee.js';
 import AddProject from './Admin/AddProject.jsx';
+import AddAnnouncement from './Admin/AddAnnouncement.jsx';
 function App() {
   return (
     <div>
@@ -41,7 +41,7 @@ function App() {
         <Route path='/updateemployee/:id' element={<UpdateEmployee/>}/>
         <Route path='/department' element={<Department/>}/>
         <Route path='/addproject' element={<AddProject/>}/>
-        <Route path='/addannouncements' element={<AddAnnouncements/>}/>
+        <Route path='/addannouncements' element={<AddAnnouncement/>}/>
         <Route path='/showemployee' element={<ShowEmployee/>}/>
         <Route path='/showdepartment' element={<ShowDepartment/>}/>
         <Route path='/showprojects' element={<ShowProjects/>}/>
